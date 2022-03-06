@@ -1,0 +1,1410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SecondaScenaController">
+   <children>
+      <Separator layoutY="401.0" prefHeight="10.0" prefWidth="1000.0" />
+      <ToggleButton fx:id="toggleButtonPersona" layoutX="63.0" mnemonicParsing="false" prefWidth="120.0" text="Persona">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleGroupClasseGenerica" />
+         </toggleGroup>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ToggleButton>
+      <ToggleButton fx:id="toggleButtonLuogo" layoutX="183.0" mnemonicParsing="false" prefWidth="120.0" text="Luogo" toggleGroup="$toggleGroupClasseGenerica">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ToggleButton>
+      <ToggleButton fx:id="toggleButtonControlloMedico" layoutX="303.0" mnemonicParsing="false" prefWidth="120.0" text="Controllo medico" toggleGroup="$toggleGroupClasseGenerica">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ToggleButton>
+      <ToggleButton fx:id="toggleButtonIncontri" layoutX="423.0" mnemonicParsing="false" prefWidth="120.0" text="Incontri" toggleGroup="$toggleGroupClasseGenerica">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ToggleButton>
+      <ToggleButton fx:id="toggleButtonVaccino" layoutX="543.0" mnemonicParsing="false" prefWidth="120.0" text="Vaccino" toggleGroup="$toggleGroupClasseGenerica">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ToggleButton>
+      
+      
+      
+      
+      <Label layoutX="655.0" layoutY="415.0" text="(*) Campo opzionale">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="771.0" layoutY="414.0" text="(**) Campo da usare in caso di ambiguità">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="console2" editable="false" layoutX="8.0" layoutY="442.0" prefHeight="150.0" prefWidth="984.0" style="-fx-background-color: gray;">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextArea><MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Menu">
+            <items>
+              <MenuItem fx:id="logoutButton" mnemonicParsing="false" text="Logout" />
+              <MenuItem fx:id="helpButton" mnemonicParsing="false" text="Help" />	
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane fx:id="schermataPersona" layoutY="25.0" prefHeight="380.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Persona">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="357.0" prefWidth="1000.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="7.0" text="Dati personali">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label><RadioButton fx:id="radioBDatiPersonali" layoutX="125.0" layoutY="11.0" mnemonicParsing="false">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="toggleGroupSelezioneCampiPersonaGenerica" />
+                           </toggleGroup>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton>
+                        
+                        
+                        
+                        <TextField fx:id="textFieldNomePersona" layoutX="129.0" layoutY="43.0" prefWidth="180.0" /><Label layoutX="10.0" layoutY="46.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><TextField fx:id="textFieldCognomePersona" layoutX="129.0" layoutY="73.0" prefWidth="180.0" /><Label layoutX="10.0" layoutY="76.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><DatePicker fx:id="textDataNascitaPersona" layoutX="129.0" layoutY="103.0" prefWidth="180.0" promptText="DD/MM/YYYY" /><Label layoutX="10.0" layoutY="106.0" text="Data Nascita">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        
+                        <TextField fx:id="textComuneNascitaPersona" layoutX="129.0" layoutY="133.0" prefWidth="180.0" /><Label layoutX="10.0" layoutY="136.0" text="Comune nascita">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><RadioButton fx:id="tbMaschio" layoutX="130.0" layoutY="167.0" mnemonicParsing="false" text="M">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="toggleGroupSessoPersonaGenerico" />
+                           </toggleGroup>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton><RadioButton fx:id="tbFemmina" layoutX="175.0" layoutY="167.0" mnemonicParsing="false" text="F" toggleGroup="$toggleGroupSessoPersonaGenerico">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></RadioButton><Label layoutX="10.0" layoutY="166.0" text="Sesso">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textFieldCFPersona" layoutX="129.0" layoutY="193.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="196.0" text="Codice Fiscale">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        
+                        <TextField fx:id="textFieldResidenza" layoutX="129.0" layoutY="223.0" prefWidth="180.0" promptText="Comune di residenza" /><Label layoutX="10.0" layoutY="223" text="Residenza">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><TextField fx:id="textFieldMail1Persona" layoutX="129.0" layoutY="253.0" prefWidth="180.0" />
+                        
+                        
+                        
+                        <Label layoutX="10.0" layoutY="256.0" text="E-Mail*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><TextField fx:id="textFieldMail2Persona" layoutX="129.0" layoutY="283.0" prefWidth="180.0" /><Label layoutX="10.0" layoutY="286.0" text="E-Mail 2*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        
+                        
+                        <TextField fx:id="textFieldTelefono1Persona" layoutX="129.0" layoutY="313.0" prefHeight="25.0" prefWidth="88.0" promptText="Telefono 1" /><TextField fx:id="textFieldTelefono2Persona" layoutX="221.0" layoutY="313.0" prefHeight="25.0" prefWidth="88.0" promptText="Telefono 2" />
+                        <Label layoutX="10.0" layoutY="316.0" text="Telefono*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Separator layoutX="333.0" orientation="VERTICAL" prefHeight="352.0" prefWidth="3.0" /><RadioButton fx:id="radioBParentela" layoutX="425.0" layoutY="12.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></RadioButton><Label layoutX="343.0" layoutY="7.0" text="Parentela">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="343.0" layoutY="76.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><TextField fx:id="textFieldPersonaNomeParentela1" disable="true" layoutX="461.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textFieldPersonaCognomeParentela1" disable="true" layoutX="461.0" layoutY="73.0" prefWidth="180.0" />
+                        
+                        <TextField fx:id="textFieldPersonaCFParentela1" disable="true" layoutX="461.0" layoutY="103.0" prefWidth="180.0" /><Label layoutX="343.0" layoutY="46.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><ChoiceBox fx:id="sceltaParentela" disable="true" layoutX="461.0" layoutY="133.0" prefHeight="25.0" prefWidth="179.0" />
+                        <Label layoutX="343.0" layoutY="196.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><TextField fx:id="textFieldPersonaNomeParentela2" disable="true" layoutX="461.0" layoutY="163.0" prefWidth="180.0" />
+                        <TextField fx:id="textFieldPersonaCognomeParentela2" disable="true" layoutX="461.0" layoutY="193.0" prefWidth="180.0" /><TextField fx:id="textFieldPersonaCFParentela2" disable="true" layoutX="461.0" layoutY="223.0" prefWidth="180.0" />
+                        
+                        <Label layoutX="343.0" layoutY="166.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="343.0" layoutY="136.0" text="Tipo di parentela">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="666.0" orientation="VERTICAL" prefHeight="352.0" prefWidth="3.0" />
+                        
+                        
+                        <RadioButton fx:id="radioBStatoDellaSalute" layoutX="816.0" layoutY="12.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></RadioButton><Label layoutX="343.0" layoutY="226.0" text="Codice Fiscale**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="343.0" layoutY="106.0" text="Codice Fiscale**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="676.0" layoutY="7.0" text="Stato della salute ">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        
+                        
+                        
+                        <Label layoutX="676.0" layoutY="76.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><TextField fx:id="textFieldPersonaNomeStatoSalute" disable="true" layoutX="802.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textFieldPersonaCognomeStatoSalute" disable="true" layoutX="802.0" layoutY="73.0" prefWidth="180.0" />
+                        
+                        
+                        <TextField fx:id="textFieldPersonaCFStatoSalute" disable="true" layoutX="802.0" layoutY="103.0" prefWidth="180.0" />
+                        <ChoiceBox fx:id="sceltaSintomi" disable="true" layoutX="803.0" layoutY="133.0" prefHeight="25.0" prefWidth="179.0" /><DatePicker fx:id="dataSintomiDatePickerStatoSalute" disable="true" layoutX="802.0" layoutY="163.0" prefWidth="180.0" /><RadioButton fx:id="tbQuarantenaSi" disable="true" layoutX="806.0" layoutY="198.0" mnemonicParsing="false" text="Si">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="toggleGroupQuarantena" />
+                           </toggleGroup>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton><RadioButton fx:id="tbQuarantenaNo" disable="true" layoutX="850.0" layoutY="198.0" mnemonicParsing="false" text="No" toggleGroup="$toggleGroupQuarantena">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton><RadioButton fx:id="tbTamponeEseguitoSi" disable="true" layoutX="806.0" layoutY="228.0" mnemonicParsing="false" text="Si">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="toggleGroupTamponeEseguito" />
+                           </toggleGroup>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton><RadioButton fx:id="tbTamponeEseguitoNo" disable="true" layoutX="850.0" layoutY="228.0" mnemonicParsing="false" text="No" toggleGroup="$toggleGroupTamponeEseguito">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton><DatePicker fx:id="textDataTamponeEseguito" disable="true" layoutX="802.0" layoutY="253.0" prefWidth="180.0" /><TextField fx:id="textFieldPersonaMalattieCronicheStatoSalute" alignment="TOP_LEFT" disable="true" layoutX="802.0" layoutY="283.0" prefHeight="60.0" prefWidth="180.0" /><Label layoutX="676.0" layoutY="46.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><Label layoutX="676.0" layoutY="106.0" text="Codice Fiscale">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="676.0" layoutY="226.0" text="Tampone eseguito*  ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="676.0" layoutY="166.0" text="Data inizio sintomi">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="676.0" layoutY="256.0" text="Data ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="676.0" layoutY="136.0" text="Sintomatologia*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="676.0" layoutY="286.0" text="Malattie Croniche*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="676.0" layoutY="196.0" text="Quarantena">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <Label fx:id="labelHelpCFPersona" layoutX="98.0" layoutY="189.0" prefHeight="17.0" prefWidth="8.0" text="?" textFill="#f83939">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textHelpCFPersona" editable="false" layoutX="102.0" layoutY="209.0" opacity="0.73" prefHeight="51.0" prefWidth="206.0" text="-Opzionale durante l'aggiunta&#10;-Obbligatorio in caso di ambiguità &#10;-Unico campo da compilare in caso di modifica." visible="false" wrapText="true">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                        <Label fx:id="labelHelpCFStatoSalute" layoutX="763.0" layoutY="97.0" prefHeight="17.0" prefWidth="8.0" text="?" textFill="#f83939">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textHelpCFStatoSalute" editable="false" layoutX="771.0" layoutY="111.0" opacity="0.73" prefHeight="51.0" prefWidth="206.0" text="-Obbligatorio in caso di ambiguità &#10;-Unico campo da compilare in caso di modifica." visible="false" wrapText="true">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                        
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Studente">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="137.0" text="Frequenta in presenza ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><RadioButton fx:id="radioBDatiPersonaliStudente" layoutX="125.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" /><TextField fx:id="textNomeStudente" disable="true" layoutX="129.0" layoutY="43.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textCognomeStudente" disable="true" layoutX="129.0" layoutY="73.0" prefHeight="25.0" prefWidth="180.0" />
+                        <TextField fx:id="textCodiceFiscaleStudente" disable="true" layoutX="129.0" layoutY="103.0" prefHeight="25.0" prefWidth="180.0" /><RadioButton fx:id="tbFrequentaInPresenzaSi" disable="true" layoutX="171.0" layoutY="139.0" mnemonicParsing="false" text="Si">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="toggleGroupFrequentaInPresenza" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="tbFrequentaInPresenzaNo" disable="true" layoutX="222.0" layoutY="139.0" mnemonicParsing="false" text="No" toggleGroup="$toggleGroupFrequentaInPresenza" />
+                        <TextField fx:id="textIDStudenteStudente" layoutX="129.0" layoutY="193" prefWidth="180.0" /><Label layoutX="10.0" layoutY="106.0" text="Codice Fiscale** ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="10.0" layoutY="46.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="10.0" layoutY="76.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="10.0" layoutY="7.0" text="Dati personali">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        
+                        <Separator layoutX="500.0" orientation="VERTICAL" prefHeight="355.0" prefWidth="3.0" />
+                        <RadioButton fx:id="radioBCompagniStudente" layoutX="597.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" /><TextField fx:id="textNomeCompagno1" disable="true" layoutX="649.0" layoutY="44.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textCognomeCompagno1" disable="true" layoutX="649.0" layoutY="74.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textCodiceFiscaleCompagno1" disable="true" layoutX="649.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textNomeCompagno2" disable="true" layoutX="649.0" layoutY="180.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textCognomeCompagno2" disable="true" layoutX="649.0" layoutY="210.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textCodiceFiscaleCompagno2" disable="true" layoutX="649.0" layoutY="240.0" prefHeight="25.0" prefWidth="180.0" /><Label layoutX="510.0" layoutY="7.0" text="Compagni">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="106.0" text="Codice Fiscale** ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="46.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="76.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="243.0" text="Codice Fiscale** ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="183.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="213.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="144.0" text="E' compagno di">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="9.0" layoutY="197.0" text="ID Studente">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelHelpIDStudente" layoutX="85.0" layoutY="189.0" prefHeight="17.0" prefWidth="8.0" text="?" textFill="#f83939">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textHelpIDStudente" editable="false" layoutX="86.0" layoutY="207.0" opacity="0.73" prefHeight="51.0" prefWidth="206.0" text="-Opzionale durante l'aggiunta&#10;-Obbligatorio in caso di ambiguità &#10;-Unico campo da compilare in caso di modifica." visible="false" wrapText="true">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Lavoratore">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="241.0" prefWidth="1011.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="106.0" text="Codice Fiscale** ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><RadioButton fx:id="radioBDatiPersonaliLavoratore" layoutX="125.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" />
+                        <TextField fx:id="textNomeLavoratore" disable="true" layoutX="129.0" layoutY="43.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textCognomeLavoratore" disable="true" layoutX="129.0" layoutY="73.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textCodiceFiscaleLavoratore" disable="true" layoutX="129.0" layoutY="103.0" prefHeight="25.0" prefWidth="180.0" /><CheckBox fx:id="checkBoxLunediLavoratore" layoutX="129.0" layoutY="138.0" mnemonicParsing="false" text="Lun" /><CheckBox fx:id="checkBoxMartediLavoratore" layoutX="179.0" layoutY="138.0" mnemonicParsing="false" text="Mar" /><CheckBox fx:id="checkBoxMercolediLavoratore" layoutX="234.0" layoutY="138.0" mnemonicParsing="false" text="Mer" /><CheckBox fx:id="checkBoxGiovediLavoratore" layoutX="129.0" layoutY="159.0" mnemonicParsing="false" text="Gio" /><CheckBox fx:id="checkBoxVenerdiLavoratore" layoutX="179.0" layoutY="159.0" mnemonicParsing="false" text="Ven" /><CheckBox fx:id="checkBoxSabatoLavoratore" layoutX="234.0" layoutY="159.0" mnemonicParsing="false" text="Sab" /><CheckBox fx:id="checkBoxDomenicaLavoratore" layoutX="289.0" layoutY="159.0" mnemonicParsing="false" text="Dom" /><ChoiceBox fx:id="tipoContrattoChoiceBox" disable="true" layoutX="129.0" layoutY="187.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textNomeSocieta" disable="true" layoutX="129.0" layoutY="217.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textIDLavoratoreDatiPersonali" layoutX="129.0" layoutY="277.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="46.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="10.0" layoutY="76.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="10.0" layoutY="7.0" text="Dati personali">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="10.0" layoutY="220.0" text="Nome società*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="10.0" layoutY="190.0" text="Tipo di contratto">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="136.0" text="Giorni lavorativi">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Separator layoutX="500.0" orientation="VERTICAL" prefHeight="355.0" prefWidth="3.0" />
+                        <Label layoutX="510.0" layoutY="7.0" text="Colleghi">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="510.0" layoutY="106.0" text="Codice Fiscale** ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioBColleghiLavoratore" layoutX="582.0" layoutY="12.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" /><TextField fx:id="textNomeCollega1" disable="true" layoutX="649.0" layoutY="44.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textCognomeCollega1" disable="true" layoutX="649.0" layoutY="74.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textCodiceFiscaleCollega1" disable="true" layoutX="649.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" />
+                        <Label layoutX="510.0" layoutY="46.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="76.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="243.0" text="Codice Fiscale** ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><TextField fx:id="textNomeCollega2" disable="true" layoutX="649.0" layoutY="180.0" prefHeight="25.0" prefWidth="180.0" />
+                        <TextField fx:id="textCognomeCollega2" disable="true" layoutX="649.0" layoutY="210.0" prefHeight="25.0" prefWidth="180.0" /><TextField fx:id="textCodiceFiscaleCollega2" disable="true" layoutX="649.0" layoutY="240.0" prefHeight="25.0" prefWidth="180.0" />
+                        <Label layoutX="510.0" layoutY="183.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="213.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="144.0" text="E' collega di">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <Label layoutX="9.0" layoutY="281.0" text="ID Lavoratore">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelHelpIDLavoratore" layoutX="92.0" layoutY="273.0" prefHeight="17.0" prefWidth="8.0" text="?" textFill="#f83939">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textHelpIDLavoratore" editable="false" layoutX="95.0" layoutY="292.0" opacity="0.73" prefHeight="51.0" prefWidth="206.0" text="-Opzionale durante l'aggiunta&#10;-Obbligatorio in caso di ambiguità &#10;-Unico campo da compilare in caso di modifica." visible="false" wrapText="true">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane fx:id="schermataLuogo" layoutY="25.0" prefHeight="380.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" visible="false">
+        <tabs>
+         <Tab text="Luogo">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="7.0" text="Dati Luogo">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioBDatiLuogo" layoutX="102.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" /><TextField fx:id="textCityDatiLuogo" layoutX="129.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textProvinciaDatiLuogo" layoutX="129.0" layoutY="73.0" prefWidth="180.0" />
+                        <TextField fx:id="textViaDatiLuogo" layoutX="129.0" layoutY="103.0" prefWidth="180.0" />
+                        <TextField fx:id="textNumeroCivicoDatiLuogo" layoutX="129.0" layoutY="133.0" prefWidth="180.0" />
+                        <TextField fx:id="textCAPDatiLuogo" layoutX="129.0" layoutY="163.0" prefWidth="180.0" /><TextField fx:id="textIDLuogo" layoutX="129.0" layoutY="223.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="46.0" text="Città">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="76.0" text="Provincia">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="106.0" text="Via">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="136.0" text="Numero Civico">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="166.0" text="CAP">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        
+                        <Label layoutX="10.0" layoutY="226.0" text="ID_Luogo">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="500.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="355.0" />
+                        <Label layoutX="510.0" layoutY="7.0" text="Gestione Luogo">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioBGestioneLuogo" layoutX="635.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" /><TextField fx:id="textNomeGestioneLuogo" layoutX="629.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textCognomeGestioneLuogo" layoutX="629.0" layoutY="73.0" prefWidth="180.0" />
+                        <TextField fx:id="textCodiceFiscaleGestioneLuogo" layoutX="629.0" layoutY="103.0" prefWidth="180.0" />
+                        <TextField fx:id="textViaGestioneLuogo" layoutX="629.0" layoutY="166.0" prefWidth="180.0" />
+                        <TextField fx:id="textNumCivicoGestioneLuogo" layoutX="629.0" layoutY="196.0" prefWidth="180.0" />
+                        <TextField fx:id="textIDLuogoGestioneLuogo" layoutX="629.0" layoutY="226.0" prefWidth="180.0" /><Label layoutX="510.0" layoutY="46.0" text="Nome ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="510.0" layoutY="76.0" text="Cognome ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="510.0" layoutY="106.0" text="Codice fiscale**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="510.0" layoutY="169.0" text="Via">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="510.0" layoutY="199.0" text="Numero Civico">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="138.0" text="Gestisce">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="229.0" text="ID_Luogo**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelHelpIDLuogo" layoutX="69.0" layoutY="220.0" prefHeight="17.0" prefWidth="8.0" text="?" textFill="#f83939">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textHelpIDLuogo" editable="false" layoutX="69.0" layoutY="239.0" opacity="0.73" prefHeight="51.0" prefWidth="206.0" text="-Opzionale durante l'aggiunta&#10;-Unico campo da compilare in caso di modifica." visible="false" wrapText="true">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Ambiente di lavoro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="7.0" text="Dati Ambiente di lavoro">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioBAmbienteLavoro" layoutX="198.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" /><TextField fx:id="textViaAmbieneLavoro" layoutX="129.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textNumCivicoAmbienteLavoro" layoutX="129.0" layoutY="73.0" prefWidth="180.0" />
+                        <TextField fx:id="textIDLuogoAmbienteLavoro" layoutX="129.0" layoutY="103.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="46.0" text="Via">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="76.0" text="Numero Civico">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="106.0" text="ID_Luogo**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="136.0" text="Orario apertura ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="166.0" text="Orario chiusura">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="10.0" layoutY="196.0" text="Dipendenti max">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><TextField fx:id="textOrarioAAmbienteLavoro" layoutX="129.0" layoutY="133.0" prefWidth="180.0" promptText="HH:MM" />
+                        <TextField fx:id="textOrarioCAmbienteLavoro" layoutX="129.0" layoutY="164.0" prefWidth="180.0" promptText="HH:MM" /><ComboBox fx:id="choicheBoxNumDipendentiAmbieneLavoro" layoutX="129.0" layoutY="194.0" prefHeight="25.0" prefWidth="63.0" /><TextField fx:id="textIDAmbienteLavoro" layoutX="174.0" layoutY="254.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="256.0" text="ID_Ambiente di lavoro">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="209.0" layoutY="198.0" text="Dipendente/i" />
+                        
+                        
+                        
+                        <Label fx:id="labelHelpIDAmbienteLavoro" layoutX="148.0" layoutY="244.0" prefHeight="17.0" prefWidth="8.0" text="?" textFill="#f83939">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textHelpIDAmbienteLavoro" editable="false" layoutX="148.0" layoutY="263.0" opacity="0.73" prefHeight="51.0" prefWidth="206.0" text="-Opzionale durante l'aggiunta&#10;-Obbligatorio in caso di ambiguità &#10;-Unico campo da compilare in caso di modifica." visible="false" wrapText="true">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Ambiente di studio">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="radioBAmbienteStudio" layoutX="198.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" /><TextField fx:id="textViaAmbienteStudio" layoutX="129.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textNumCivicoAmbienteStudio" layoutX="129.0" layoutY="73.0" prefWidth="180.0" />
+                        <TextField fx:id="textIDLuogoAmbienteStudio" layoutX="129.0" layoutY="103.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="46.0" text="Via">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="76.0" text="Numero Civico">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="106.0" text="ID_Luogo**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="136.0" text="Tipo">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="choicheBoxTipoAmbienteStudio" accessibleRole="IMAGE_VIEW" layoutX="129.0" layoutY="133.0" prefWidth="180.0" /><TextField fx:id="textIDAmbienteStudio" layoutX="174.0" layoutY="193.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="7.0" text="Dati Ambiente di studio">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        
+                        <Separator layoutX="500.0" orientation="VERTICAL" prefHeight="355.0" /><RadioButton fx:id="radioBAula" layoutX="556.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" /><TextField fx:id="textIDAmbienteStudioAula" layoutX="660.0" layoutY="43.0" prefWidth="180.0" />
+                        <ComboBox fx:id="choicheBoxNumPostiAula" layoutX="660.0" layoutY="73.0" prefHeight="25.0" prefWidth="63.0" /><TextField fx:id="textID_Aula" layoutX="660.0" layoutY="134.0" prefWidth="180.0" />
+                        <Label layoutX="510.0" layoutY="46.0" text="ID_AmbienteStudio">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="510.0" layoutY="76.0" text="Numero posti massimi">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="510.0" layoutY="7.0" text="Aula">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        
+                        
+                        <Label layoutX="510.0" layoutY="137.0" text="ID_Aula">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="10.0" layoutY="195.0" text="ID_Ambiente di studio">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="734.0" layoutY="78.0" text="Studente/i" />
+                        
+                        <Label fx:id="labelHelpIDAmbienteStudio" layoutX="148.0" layoutY="183.0" prefHeight="17.0" prefWidth="8.0" text="?" textFill="#f83939">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textHelpIDAmbienteStudio" editable="false" layoutX="148.0" layoutY="202.0" opacity="0.73" prefHeight="51.0" prefWidth="206.0" text="-Opzionale durante l'aggiunta&#10;-Obbligatorio in caso di ambiguità &#10;-Unico campo da compilare in caso di modifica." visible="false" wrapText="true">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                        <Label fx:id="labelHelpIDAula" layoutX="557.0" layoutY="128.0" prefHeight="17.0" prefWidth="8.0" text="?" textFill="#f83939">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textHelpIDAula" editable="false" layoutX="557.0" layoutY="147.0" opacity="0.73" prefHeight="51.0" prefWidth="206.0" text="-Opzionale durante l'aggiunta&#10;-Obbligatorio in caso di ambiguità &#10;-Unico campo da compilare in caso di modifica." visible="false" wrapText="true">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Ambiente di un evento occasionale">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="7.0" text="Dati ambiente evento occasionale">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioBAmbienteEventoOccasionale" layoutX="270.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" /><TextField fx:id="textViaAmbienteEventoOccasionale" layoutX="129.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textNumCivicoAmbienteEventoOccasionale" layoutX="129.0" layoutY="73.0" prefWidth="180.0" />
+                        <TextField fx:id="textIDLuogoAmbienteEventoOccasionale" layoutX="129.0" layoutY="103.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="46.0" text="Via">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="76.0" text="Numero Civico">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="106.0" text="ID_Luogo**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="136.0" text="Luogo aperto">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="166.0" text="Dimensione*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                         <Label layoutX="312.0" layoutY="166.0" text="m">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                         <Label layoutX="324.0" layoutY="166.0" text="2">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="10.0" layoutY="196.0" text="N. Partecipanti*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <RadioButton fx:id="radioBLuogoApertoSi" layoutX="129.0" layoutY="138.0" mnemonicParsing="false" text="Si">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="toggleGroupLuogoApertoEventoOccasionale" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="radioBLuogoApertoNo" layoutX="176.0" layoutY="138.0" mnemonicParsing="false" text="No" toggleGroup="$toggleGroupLuogoApertoEventoOccasionale" /><TextField fx:id="textDimensioniAmbienteEventoOccasionale" layoutX="129.0" layoutY="163.0" prefWidth="180.0" /><ComboBox fx:id="choicheBoxNumPartecipantiAmbienteEventoOccasionale" layoutX="129.0" layoutY="193.0" prefHeight="25.0" prefWidth="63.0" />
+                        <TextField fx:id="textIDAmbienteEventoOccasionale" layoutX="244.0" layoutY="253.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="255.0" text="ID_Ambiente evento occasionale">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="202.0" layoutY="197.0" text="Persona/e" />
+                        
+                        <Label fx:id="labelHelpIDAmbienteEventoOcc" layoutX="211.0" layoutY="244.0" prefHeight="17.0" prefWidth="8.0" text="?" textFill="#f83939">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textHelpIDAmbienteEventoOcc" editable="false" layoutX="211.0" layoutY="263.0" opacity="0.73" prefHeight="51.0" prefWidth="206.0" text="-Opzionale durante l'aggiunta&#10;-Obbligatorio in caso di ambiguità &#10;-Unico campo da compilare in caso di modifica." visible="false" wrapText="true">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Ambiente familiare">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="7.0" text="Dati Ambiente familiare">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label><RadioButton fx:id="radioBAmbienteFamiliare" layoutX="198.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" />
+                        <TextField fx:id="textViaAmbienteFamiliare" layoutX="129.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textNumCivicoAmbienteFamiliare" layoutX="129.0" layoutY="73.0" prefWidth="180.0" />
+                        <TextField fx:id="textIDLuogoAmbienteFamiliare" layoutX="129.0" layoutY="103.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="46.0" text="Via">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="76.0" text="Numero Civico">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="106.0" text="ID_Luogo**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="136.0" text="Tipo">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="166.0" text="Dimensione">
+                           <font>
+                              <Font size="14.0" />
+                           </font>   
+                        </Label>
+                        <Label layoutX="312.0" layoutY="166.0" text="m">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                         <Label layoutX="324.0" layoutY="166.0" text="2">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="choicheBoxTipoAmbienteFamiliare" accessibleRole="IMAGE_VIEW" layoutX="129.0" layoutY="133.0" prefWidth="180.0" />
+                        
+                        <TextField fx:id="textDimensioneAmbienteFamiliare" layoutX="129.0" layoutY="163.0" prefWidth="180.0" />
+                        
+                        <TextField fx:id="textIDAmbienteFamiliare" layoutX="175.0" layoutY="223.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="225.0" text="ID_Ambiente familiare">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelHelpIDAmbienteFamiliare" layoutX="147.0" layoutY="215.0" prefHeight="17.0" prefWidth="8.0" text="?" textFill="#f83939">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textHelpIDAmbienteFamiliare" editable="false" layoutX="147.0" layoutY="234.0" opacity="0.73" prefHeight="51.0" prefWidth="206.0" text="-Opzionale durante l'aggiunta&#10;-Obbligatorio in caso di ambiguità &#10;-Unico campo da compilare in caso di modifica." visible="false" wrapText="true">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane fx:id="schermataControlloMedico" layoutY="25.0" prefHeight="380.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" visible="false">
+         <tabs>
+            <Tab text="Controllo medico">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="7.0" text="Dati visita medica">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioBDatiControlloMedico" layoutX="153.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" /><TextField fx:id="textNomeMedicoControlloMedico" layoutX="129.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textNomeOspedaleControlloMedico" layoutX="129.0" layoutY="73.0" prefWidth="180.0" /><ChoiceBox fx:id="choiceBoxTipoControlloMedico" layoutX="129.0" layoutY="103.0" prefWidth="180.0" /><ChoiceBox fx:id="choiceBoxEsitoControlloMedico" layoutX="129.0" layoutY="133.0" prefWidth="180.0" /><DatePicker fx:id="datePickerDataControlloMedico" layoutX="129.0" layoutY="163.0" prefWidth="180.0" /><TextField fx:id="textIDControlloMedico" layoutX="162.0" layoutY="224.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="46.0" text="Nome medico*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="76.0" text="Nome struttura*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="106.0" text="Tipo">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="136.0" text="Esito">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="166.0" text="Data">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <TextField fx:id="textNomeControlloMedico" layoutX="492.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textCognomeControlloMedico" layoutX="492.0" layoutY="73.0" prefWidth="180.0" />
+                        <TextField fx:id="textCodiceFiscaleControlloMedico" layoutX="492.0" layoutY="103.0" prefWidth="180.0" />
+                        <TextField fx:id="textViaControlloMedico" layoutX="492.0" layoutY="163.0" prefWidth="180.0" />
+                        <TextField fx:id="textNumCivicoControlloMedico" layoutX="492.0" layoutY="193.0" prefWidth="180.0" />
+                        <TextField fx:id="textIDLuogoControlloMedico" layoutX="492.0" layoutY="223.0" prefWidth="180.0" /><Label layoutX="373.0" layoutY="46.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="373.0" layoutY="76.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="373.0" layoutY="106.0" text="Codice fiscale**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="373.0" layoutY="166.0" text="Via">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="373.0" layoutY="196.0" text="Numero civico">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="373.0" layoutY="226.0" text="ID_Luogo**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Label layoutX="373.0" layoutY="15.0" text="Persona a cui è stato fatto il controllo">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="373.0" layoutY="136.0" text="Luogo in cui è stato fatto il controllo">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        
+                        
+                        
+                        <Label layoutX="10.0" layoutY="225.0" text="ID_Controllo Medico">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelHelpIDControlloMedico" layoutX="140.0" layoutY="217.0" prefHeight="17.0" prefWidth="8.0" text="?" textFill="#f83939">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textHelpIDControlloMedico" editable="false" layoutX="140.0" layoutY="237.0" opacity="0.73" prefHeight="51.0" prefWidth="206.0" text="-Opzionale durante l'aggiunta&#10;-Unico campo da compilare in caso di modifica." visible="false" wrapText="true">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <TabPane fx:id="schermataGestioneIncontri" layoutY="25.0" prefHeight="380.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" visible="false">
+         
+         <tabs>
+            <Tab text="Visita">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="7.0" text="Dati luoghi visitati ">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label><RadioButton fx:id="radioBDatiIncontroVisita" layoutX="156.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" />
+                        <TextField fx:id="textNomeDatiIncontro" layoutX="129.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textCognomeDatiIncontro" layoutX="129.0" layoutY="73.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="46.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="76.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <TextField fx:id="textCodiceFiscaleDatiIncontro" layoutX="129.0" layoutY="103.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="106.0" text="Codice fiscale**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textViaDatiIncontro" layoutX="129.0" layoutY="165.0" prefWidth="180.0" />
+                        <TextField fx:id="textNumCivicoDatiIncontro" layoutX="129.0" layoutY="195.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="168.0" text="Via">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="198.0" text="Numero Civico">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textIDLuogoDatiIncontro" layoutX="129.0" layoutY="225.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="228.0" text="ID_Luogo**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="138.0" text="Luogo visitato">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="358.0" layoutY="10.0" text="Orario della visita">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label><DatePicker fx:id="datePickerDataDatiIncontro" layoutX="477.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textorarioDatiIncontro" layoutX="477.0" layoutY="73.0" prefWidth="180.0" promptText="HH:MM" />
+                        <Label layoutX="358.0" layoutY="46.0" text="Data">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="358.0" layoutY="76.0" text="Orario">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Frequentazione istituzionale">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="7.0" text="Luoghi istituzionali frequentati">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioBLuoghiIstituzionaliFrequentati" layoutX="251.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" /><TextField fx:id="textNomeLuoghiIST" layoutX="129.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textCognomeLuoghiIST" layoutX="129.0" layoutY="73.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="46.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="76.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <TextField fx:id="textIDStudenteLuoghiIST" layoutX="129.0" layoutY="103.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="106.0" text="ID_Studente**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textViaLuoghiIST" layoutX="129.0" layoutY="165.0" prefWidth="180.0" />
+                        <TextField fx:id="textNumeroCivicoLuoghiIST" layoutX="129.0" layoutY="195.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="198.0" text="Numero Civico">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textIDAmbienteStudioLuoghiIST" layoutX="130.0" layoutY="225.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="228.0" text="ID_Ambiente Studio**" />
+                        <Label layoutX="10.0" layoutY="138.0" text="Frequenta in">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="168.0" text="Via">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content></Tab><Tab text="Abitudini lavorative">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="7.0" text="Luoghi lavorativi frequentati">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label><RadioButton fx:id="radioBLuoghiAbitudiniLavorative" layoutX="251.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" />
+                        <TextField fx:id="textNomeLuoghiLAV" layoutX="129.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textCognomeLuoghiLAV" layoutX="129.0" layoutY="73.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="46.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="76.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <TextField fx:id="textIDLavoratoreLuoghiLAV" layoutX="129.0" layoutY="103.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="106.0" text="ID_Lavoratore**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textViaLuoghiLAV" layoutX="129.0" layoutY="165.0" prefWidth="180.0" />
+                        <TextField fx:id="textNumeroCivicoLuoghiLAV" layoutX="129.0" layoutY="195.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="198.0" text="Numero Civico">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textIDAmbienteLavorativoLuoghiLAV" layoutX="130.0" layoutY="225.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="228.0" prefHeight="34.0" prefWidth="107.0" text="ID_Ambiente Lavorativo**" wrapText="true" />
+                        <Label layoutX="10.0" layoutY="138.0" text="Lavora in">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="168.0" text="Via">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label><DatePicker fx:id="datePickerLuoghiLAV" layoutX="490.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textOrarioIngressoLuoghiLAV" layoutX="490.0" layoutY="74.0" prefWidth="180.0" promptText="HH:MM" />
+                        <Label layoutX="371.0" layoutY="77.0" text="Orario ingresso">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="371.0" layoutY="45.0" text="Data">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textOrarioUscitaLuoghiLAV" layoutX="490.0" layoutY="103.0" prefWidth="180.0" promptText="HH:MM" />
+                        <Label layoutX="371.0" layoutY="106.0" text="Orario uscita">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+               </content></Tab>
+         </tabs>
+      </TabPane>
+      <TabPane fx:id="schermataVaccino" layoutX="1.0" layoutY="25.0" prefHeight="380.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" visible="false">
+        <tabs>
+          <Tab text="Vaccino">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="7.0" text="Dati vaccino ">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioBDatiVaccino" layoutX="113.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" /><TextField fx:id="textIDVaccinoDatiVaccino" layoutX="129.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textEnteRilascioDatiVaccino" layoutX="129.0" layoutY="73.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="46.0" text="ID_Vaccino">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="76.0" text="Ente di rilascio">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <TextField fx:id="textControindicazioniDatiVaccino" layoutX="129.0" layoutY="103.0" prefWidth="180.0" />
+                        <Label layoutX="10.0" layoutY="106.0" text="Controindicazioni*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="136.0" text="Tipo di vaccino">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="166.0" text="Periodo utile">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="tipoVaccinoChoiceBox" layoutX="129.0" layoutY="133.0" prefHeight="25.0" prefWidth="180.0" />
+                        <ChoiceBox fx:id="periodoUtileChoiceBox" layoutX="129.0" layoutY="164.0" prefHeight="25.0" prefWidth="72.0" />
+                        <Label layoutX="210.0" layoutY="167.0" text="Giorno/i">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="500.0" orientation="VERTICAL" prefHeight="351.0" />
+                        <Label layoutX="510.0" layoutY="7.0" text="Somministrazione vaccino">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label><RadioButton fx:id="radioBSomministrazioneVaccino" layoutX="717.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggleGroupSelezioneCampiPersonaGenerica" />
+                        <TextField fx:id="textNomeSomministrazioneVaccino" layoutX="629.0" layoutY="43.0" prefWidth="180.0" />
+                        <TextField fx:id="textCognomeSomministrazioneVaccino" layoutX="629.0" layoutY="73.0" prefWidth="180.0" />
+                        <Label layoutX="510.0" layoutY="46.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="510.0" layoutY="76.0" text="Cognome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <TextField fx:id="textCodiceFiscaleSomministrazioneVaccino" layoutX="629.0" layoutY="103.0" prefWidth="180.0" />
+                        <Label layoutX="510.0" layoutY="106.0" text="Codice fiscale**">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textIDVaccinoSomministrazioneVaccino" layoutX="629.0" layoutY="191.0" prefWidth="180.0" />
+                        <Label layoutX="510.0" layoutY="194.0" text="ID_Vaccino">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="510.0" layoutY="164.0" text="Vaccino somministrato : ">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelHelpIDVaccinoDatiVaccino" layoutX="78.0" layoutY="42.0" prefHeight="17.0" prefWidth="8.0" text="?" textFill="#f83939">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textHelpIDVaccinoDatiVaccino" editable="false" layoutX="79.0" layoutY="60.0" opacity="0.73" prefHeight="51.0" prefWidth="206.0" text="-Opzionale durante l'aggiunta&#10;-Obbligatorio in caso di ambiguità &#10;-Unico campo da compilare in caso di modifica." visible="false" wrapText="true">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextArea><DatePicker fx:id="dataSomministrazioneVaccino" layoutX="629.0" layoutY="242.0" prefWidth="180.0" />
+                        <TextField fx:id="textComplicazioniVaccino" alignment="TOP_LEFT" layoutX="629.0" layoutY="274.0" prefHeight="60.0" prefWidth="180.0" />
+                        <Label layoutX="510.0" layoutY="245.0" text="Data">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        
+                        <Label layoutX="510.0" layoutY="294.0" text="Complicazioni*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane><Button fx:id="buttonAggiungi" layoutX="14.0" layoutY="412.0" mnemonicParsing="false" prefWidth="80.0" text="Aggiungi">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button><Button fx:id="buttonModifica" layoutX="101.0" layoutY="412.0" mnemonicParsing="false" prefWidth="80.0" text="Modifica">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button><Button fx:id="buttonRicerca" layoutX="188.0" layoutY="412.0" mnemonicParsing="false" prefWidth="80.0" text="Ricerca">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button><Button fx:id="buttonSalva" layoutX="275.0" layoutY="412.0" mnemonicParsing="false" prefWidth="80.0" text="Salva">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button><Button fx:id="buttonAnnulla" layoutX="362.0" layoutY="412.0" mnemonicParsing="false" prefWidth="80.0" text="Annulla" /><Button fx:id="buttonPulisci" layoutX="449.0" layoutY="412.0" mnemonicParsing="false" prefWidth="80.0" text="Pulisci" />
+      
+      
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.helpController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="585.0">
+         <children>
+            <Label layoutX="10.0" layoutY="14.0" text="Suggerimenti e domande tipiche">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="84.0" text="1. Cosa significa il seguente errore ? " wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="114.0" text="-ORA-01400: impossibile inserire NULL in (&quot;...&quot;.&quot;...&quot;.&quot;NomeCampo&quot;)" />
+            <TextArea editable="false" layoutX="10.0" layoutY="134.0" prefHeight="60.0" prefWidth="570.0" text="Il seguente errore viene visualizzato quando il campo &quot;NomeCampo&quot; non è stato compilato nonostante quest'ultimo fosse obbligatorio per portare a termine correttamente l'operazione. &#10;Per risolverlo bisogna dunque ripetere l'operazione compilando correttamente il campo." wrapText="true" />
+            <Label layoutX="10.0" layoutY="208.0" prefHeight="38.0" prefWidth="580.0" text="-- Attenzione ambiguità: Ci sono più ... con i dati inseriti, ripetere l'operazione specificando anche il ... --" wrapText="true" />
+            <TextArea editable="false" layoutX="10.0" layoutY="238.0" prefHeight="130.0" prefWidth="570.0" text="Il seguente viene visualizzato quando è stata riscontrata un ambiguità. &#10;L'ambiguità è una situazione in cui ci sono piu entità che corrispondono ai campi utilizzati fino a quel momento. &#10;Es. Vogliamo modificare uno studente. Specificando solo il nome dello studente potremmo andare in contro ad un'ambiguità poichè ci sono possono essere piu persone con lo stesso nome. &#10;Per risolvere il problema sarà necessario ripetere l'operazione specificando altri campi, oppure indicando il codice identificativo dell'entità. " wrapText="true" />
+            <Label layoutX="10.0" layoutY="525.0" text="2. Come faccio a modificare un entità ? " wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextArea editable="false" layoutX="10.0" layoutY="549.0" prefHeight="95.0" prefWidth="570.0" text="Ogni entità possiede un codice identificativo che lo rende unico. Quando si vuole modificare una particolare entità sarà necessario inserire il suo codice e premere &quot;Modifica&quot;, dopodichè, in automatico, saranno compilati i campi modificabili dando la possibilità di cambiarli a piacimento. Una volta che si è soddisfatti delle modifiche basta premere su &quot;Salva&quot; per salvare le modifiche apportate oppure premere &quot;Annulla&quot; per ignorare le modifiche. " wrapText="true" />
+            <Label layoutX="10.0" layoutY="656.0" text="3. Come faccio ad effettuare una ricerca? " wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextArea editable="false" layoutX="10.0" layoutY="682.0" prefHeight="45.0" prefWidth="570.0" text="Per effettuare una ricerca basta compilare (anche nessuno) qualche campo di un entità e premere &quot;Ricerca&quot;, in seguito verranno riportate nella console i risultati corrispondenti ai dati indicati. " wrapText="true" />
+            <Label layoutX="10.0" layoutY="368.0" prefHeight="38.0" prefWidth="580.0" text="-ORA-00001: violata restrizione di unicità (...)" wrapText="true" />
+            <TextArea editable="false" layoutX="10.0" layoutY="402.0" prefHeight="45.0" prefWidth="570.0" text="Il seguente errore viene visualizzato quando si sta provando ad inserire un entità già esistente. &#10;" wrapText="true" />
+            <Label layoutX="11.0" layoutY="451.0" text="-ORA-02290: restrizione di controllo violata(..)" />
+            <TextArea layoutX="10.0" layoutY="470.0" prefHeight="45.0" prefWidth="570.0" text="Il seguente errore viene visualizzato quando si prova ad inserire i valori in un campo senza rispettare il formato corretto." wrapText="true" />
+         </children>
+      </AnchorPane>
+  </content>
+</ScrollPane>
