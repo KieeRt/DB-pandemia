@@ -8,9 +8,9 @@ Degli utenti va memorizzato:
 -	Informazioni sulla eventuale malattia.
 
 ## Descrizione sintetica delle tecnologie utlizzate
--Viene sviluppata una applicazione Desktop utilizzando linguaggio di programmazione Java e le sue librerie JavaFX per realizzazione dell'interfaccia grafica, la quale ha lo scopo di facilitare
-la comunicazione con il nostro database Oracle.
--Viene progettata e implementata una base di dati relazionare utilizzando il database di Oracle.
+-Viene sviluppata una applicazione Desktop utilizzando linguaggio di programmazione Java e le sue librerie JavaFX per realizzazione dell'interfaccia utente, la quale ha lo scopo di facilitare la comunicazione con il nostro database Oracle.
+
+-Viene progettata e implementata una base di dati relazionale utilizzando il database di Oracle.
 
 Class Diagram del database:
-![alt text](https://github.com/KieeRt/DB-pandemia/tree/main/Documentazione/database.jpg?raw=true)
+![database](https://user-images.githubusercontent.com/44137092/156939472-11998c76-d75b-4c41-8492-3c7ff61d2cc1.jpg)
