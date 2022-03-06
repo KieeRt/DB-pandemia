@@ -13,4 +13,4 @@ la comunicazione con il nostro database Oracle.
 -Viene progettata e implementata una base di dati relazionare utilizzando il database di Oracle.
 
 Class Diagram del database:
-![alt text](https://drive.google.com/file/d/1MHHRVCJJeu0CCV9SFFGar6irLHnUupKA/view)
+![alt text](https://github.com/KieeRt/DB-pandemia/tree/main/Documentazione/database.jpg?raw=true)
